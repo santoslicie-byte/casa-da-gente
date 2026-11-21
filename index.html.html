@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa da Gente | Eco Lounge - Nossa casinha pra você celebrar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        lounge: {
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            dark: '#121210',
+                            card: '#1C1B18',
+                            accent: '#E0A938',
+                            green: '#2E5A44',
+                            warm: '#FAF8F5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-lounge-warm text-stone-800 font-sans antialiased selection:bg-lounge-gold selection:text-lounge-dark">
+
+    <!-- Navegação Superior -->
+    <header class="fixed top-0 w-full z-50 bg-lounge-dark/95 backdrop-blur-md border-b border-stone-800 text-white transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-lounge-gold to-amber-600 flex items-center justify-center text-lounge-dark shadow-lg group-hover:scale-105 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-xl tracking-wide text-lounge-gold block leading-none">CASA DA GENTE</span>
+                    <span class="text-[10px] tracking-[0.25em] text-stone-400 uppercase block mt-1">Eco Lounge</span>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-300">
+                <a href="#espaco" class="hover:text-lounge-gold transition-colors">O Espaço</a>
+                <a href="#estrutura" class="hover:text-lounge-gold transition-colors">Estrutura</a>
+                <a href="#vantagens" class="hover:text-lounge-gold transition-colors">Vantagens & Parceiros</a>
+                <a href="#localizacao" class="hover:text-lounge-gold transition-colors">Localização</a>
+            </nav>
+
+            <!-- Botão CTA Header -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="bg-lounge-gold hover:bg-amber-400 text-lounge-dark font-semibold text-sm px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-lounge-gold/20">
+                    Faça sua reserva agora
+                </a>
+                <!-- Botão Menu Mobile -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-stone-300 hover:bg-stone-800 focus:outline-none" aria-label="Abrir Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-lounge-dark border-b border-stone-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#espaco" class="block py-2 text-stone-300 hover:text-lounge-gold font-medium">O Espaço</a>
+            <a href="#estrutura" class="block py-2 text-stone-300 hover:text-lounge-gold font-medium">Estrutura</a>
+            <a href="#vantagens" class="block py-2 text-stone-300 hover:text-lounge-gold font-medium">Vantagens & Parceiros</a>
+            <a href="#localizacao" class="block py-2 text-stone-300 hover:text-lounge-gold font-medium">Localização</a>
+            <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="block py-2 text-lounge-gold font-semibold">Faça sua reserva agora</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 min-h-[85vh] flex items-center bg-lounge-dark overflow-hidden">
+        <!-- Imagem de Fundo com Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img id="hero-bg-img" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1920&q=80" 
+                 onerror="this.src='https://placehold.co/1920x1080/1C1B18/D4AF37?text=Casa+da+Gente+Eco+Lounge'"
+                 alt="Área externa e jardim da Casa da Gente" 
+                 class="w-full h-full object-cover opacity-45 scale-105 transition-transform duration-1000">
+            <div class="absolute inset-0 bg-gradient-to-t from-lounge-dark via-lounge-dark/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center md:text-left grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-8 space-y-6">
+                <a href="https://maps.app.goo.gl/89eVMzTgNRbwaTgJ7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lounge-gold/15 border border-lounge-gold/30 text-lounge-gold hover:bg-lounge-gold/25 text-xs font-semibold tracking-wider uppercase transition-colors">
+                    <span>📍 Estrada do Amapá • Rio Branco/AC (Ver Mapa)</span>
+                </a>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    Nossa casinha pra <span class="text-lounge-gold italic">você celebrar</span> momentos inesquecíveis.
+                </h1>
+                <p class="text-lg sm:text-xl text-stone-300 max-w-2xl font-light leading-relaxed">
+                    Um refúgio exclusivo cercado pela natureza, com piscina, açude com deck, tirolesa e estrutura completa para aniversários, confraternizações e lazer em família.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                    <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="bg-lounge-gold hover:bg-amber-400 text-lounge-dark font-bold px-8 py-4 rounded-full text-center transition-all shadow-lg shadow-lounge-gold/20 flex items-center justify-center gap-2">
+                        <span>Faça sua reserva agora</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                    <a href="#espaco" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20 font-medium px-8 py-4 rounded-full text-center transition-all">
+                        Conhecer o Espaço
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Destaque Rápido -->
+            <div class="md:col-span-4 bg-lounge-card/90 backdrop-blur-md border border-stone-700/80 p-6 rounded-3xl text-left shadow-2xl">
+                <span class="text-xs font-bold uppercase tracking-wider text-lounge-gold">Condição Especial</span>
+                <h3 class="font-serif text-2xl text-white font-bold mt-1">8 Horas de Festa</h3>
+                <p class="text-stone-400 text-sm mt-2 leading-relaxed">
+                    Todas as locações incluem <strong class="text-white">+2h para montagem</strong> e <strong class="text-white">+1h para desmontagem</strong> sem custo adicional!
+                </p>
+                <div class="mt-6 pt-5 border-t border-stone-800 space-y-3">
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-stone-400">Descontos com parceiros</span>
+                        <span class="text-base font-bold text-lounge-gold">Até 25% OFF</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-stone-400">Atendimento direto</span>
+                        <span class="text-white font-semibold">Via WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Fotos do Espaço -->
+    <section id="espaco" class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-lounge-green font-bold text-xs uppercase tracking-[0.2em]">Conheça Cada Detalhe</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mt-2">Um cenário encantador em meio ao verde</h2>
+            <p class="text-stone-600 mt-3 text-base sm:text-lg">
+                Amplo gramado, sobrado aconchegante com varandas, área gourmet coberta e piscina refrescante. Clique nas fotos para ampliar.
+            </p>
+        </div>
+
+        <!-- Grid da Galeria -->
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- As fotos são carregadas dinamicamente via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Nossa Estrutura Completa -->
+    <section id="estrutura" class="py-20 bg-lounge-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-lounge-gold font-bold text-xs uppercase tracking-[0.25em]">À Disposição de Quem Aluga</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Nossa Estrutura Completa</h2>
+                <p class="text-stone-400 mt-3">Espaço exclusivo para você e seus convidados aproveitarem com total privacidade, lazer e comodidade.</p>
+            </div>
+
+            <!-- Grid dos 16 Itens da Estrutura -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+                <!-- Item 1 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🌳</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Gramado amplo</span>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">💧</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Açude com deck</span>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🏊</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Piscina</span>
+                </div>
+                <!-- Item 4 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🧗</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Tirolesa</span>
+                </div>
+                <!-- Item 5 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🎠</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Balanço</span>
+                </div>
+                <!-- Item 6 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🎱</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Sinuca</span>
+                </div>
+                <!-- Item 7 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">⚽</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Totó</span>
+                </div>
+                <!-- Item 8 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🧸</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Brinquedoteca</span>
+                </div>
+                <!-- Item 9 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🛝</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Escorregador e brinquedos</span>
+                </div>
+                <!-- Item 10 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🔥</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Churrasqueira</span>
+                </div>
+                <!-- Item 11 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🍳</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Fogão</span>
+                </div>
+                <!-- Item 12 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">❄️</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Dois freezers</span>
+                </div>
+                <!-- Item 13 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🚻</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Banheiro</span>
+                </div>
+                <!-- Item 14 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🚿</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Chuveiro</span>
+                </div>
+                <!-- Item 15 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">📶</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Wi-Fi</span>
+                </div>
+                <!-- Item 16 -->
+                <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-5 rounded-2xl flex items-center gap-4 transition-all">
+                    <span class="text-2xl">🚗</span>
+                    <span class="font-medium text-stone-200 text-sm sm:text-base">Estacionamento</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vantagens & Descontos com Parceiros -->
+    <section id="vantagens" class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-lounge-green font-bold text-xs uppercase tracking-[0.2em]">Benefícios Exclusivos</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mt-2">Feche com nossos parceiros e economize</h2>
+            <p class="text-stone-600 mt-3 text-base sm:text-lg">
+                Garanta descontos especiais no valor do aluguel do espaço ao contratar nossos parceiros oficiais de eventos.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-lounge-dark text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-stone-800">
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <!-- Parceiro 1 -->
+                    <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-6 rounded-2xl text-center transition-all">
+                        <span class="inline-block bg-lounge-gold/20 text-lounge-gold font-extrabold px-4 py-1.5 rounded-full text-lg mb-3">-15%</span>
+                        <h3 class="font-bold text-white text-lg">Buffet</h3>
+                        <p class="text-xs text-stone-400 mt-1">de desconto no aluguel fechando o Buffet parceiro</p>
+                    </div>
+
+                    <!-- Parceiro 2 -->
+                    <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-6 rounded-2xl text-center transition-all">
+                        <span class="inline-block bg-lounge-gold/20 text-lounge-gold font-extrabold px-4 py-1.5 rounded-full text-lg mb-3">-10%</span>
+                        <h3 class="font-bold text-white text-lg">Decoração</h3>
+                        <p class="text-xs text-stone-400 mt-1">de desconto no aluguel fechando a Decoração</p>
+                    </div>
+
+                    <!-- Parceiro 3 -->
+                    <div class="bg-lounge-card border border-stone-800 hover:border-lounge-gold/50 p-6 rounded-2xl text-center transition-all">
+                        <span class="inline-block bg-lounge-gold/20 text-lounge-gold font-extrabold px-4 py-1.5 rounded-full text-lg mb-3">-10%</span>
+                        <h3 class="font-bold text-white text-lg">Som e Iluminação</h3>
+                        <p class="text-xs text-stone-400 mt-1">de desconto no aluguel fechando Som e Iluminação</p>
+                    </div>
+                </div>
+
+                <!-- Destaque Pacote Completo -->
+                <div class="mt-6 bg-gradient-to-r from-lounge-gold to-amber-500 text-lounge-dark p-6 sm:p-7 rounded-2xl shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                    <div>
+                        <div class="flex items-center justify-center sm:justify-start gap-3">
+                            <span class="font-extrabold text-xl uppercase tracking-wide">Pacote Completo</span>
+                            <span class="bg-lounge-dark text-lounge-gold font-bold px-3.5 py-1 rounded-full text-sm">-25% OFF</span>
+                        </div>
+                        <p class="text-sm font-medium mt-1.5 text-stone-900">Espaço + Buffet + Decoração + Som e Iluminação</p>
+                    </div>
+                    <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="bg-lounge-dark hover:bg-stone-800 text-white font-bold px-6 py-3 rounded-full text-sm transition-all shrink-0">
+                        Saiba mais no WhatsApp
+                    </a>
+                </div>
+
+                <!-- Informações adicionais e CTA Principal -->
+                <div class="mt-8 pt-6 border-t border-stone-800 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <p class="text-sm text-stone-300">
+                            <strong class="text-lounge-gold">Duração padrão:</strong> até 8h de festa + 2h para montagem e 1h para desmontagem, sem custo adicional.
+                        </p>
+                        <p class="text-xs text-stone-400 mt-1">Consulte valores por dia/turno e disponibilidade de datas diretamente com nossa equipe.</p>
+                    </div>
+
+                    <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all flex items-center justify-center gap-2.5 shrink-0">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                        <span>Faça sua reserva agora</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Localização e Chamada Final -->
+    <section id="localizacao" class="py-16 bg-stone-200/70">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-200 grid md:grid-cols-12 items-center">
+                <div class="md:col-span-7 p-8 sm:p-10 space-y-4">
+                    <span class="text-lounge-green font-bold text-xs uppercase tracking-widest">Fácil Acesso</span>
+                    <h2 class="font-serif text-3xl font-bold text-stone-900">Como chegar na Casa da Gente</h2>
+                    <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                        Estamos localizados na <strong>Estrada do Amapá, Rio Branco/AC</strong>, em um ambiente tranquilo, seguro e com estacionamento próprio para você e seus convidados.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <a href="https://maps.app.goo.gl/89eVMzTgNRbwaTgJ7" target="_blank" rel="noopener noreferrer" class="bg-lounge-dark hover:bg-stone-800 text-white font-semibold px-6 py-3 rounded-full text-sm transition-all inline-flex items-center gap-2">
+                            <span>📍 Abrir no Google Maps</span>
+                        </a>
+                        <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="bg-lounge-gold hover:bg-amber-400 text-lounge-dark font-bold px-6 py-3 rounded-full text-sm transition-all inline-flex items-center gap-2">
+                            <span>Faça sua reserva agora</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="https://maps.app.goo.gl/89eVMzTgNRbwaTgJ7" target="_blank" rel="noopener noreferrer" class="md:col-span-5 h-64 md:h-full block relative group overflow-hidden bg-stone-100">
+                    <img src="https://ugc.production.linktr.ee/85ce6822-39d1-4832-b6ba-79fbd35654cf_staticmap.png?io=true&size=thumbnail-stack_v1_0" 
+                         onerror="this.src='https://placehold.co/600x400/2E5A44/FFFFFF?text=Mapa+Estrada+do+Amapa'"
+                         alt="Mapa de localização Casa da Gente" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                        <span class="bg-white/95 text-stone-900 font-bold text-xs px-4 py-2 rounded-full shadow-md">Abrir no Google Maps</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé e Localização -->
+    <footer class="bg-lounge-dark text-stone-300 border-t border-stone-800 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-10">
+            <div>
+                <span class="font-serif font-bold text-2xl text-lounge-gold block">CASA DA GENTE</span>
+                <span class="text-xs tracking-[0.25em] text-stone-400 uppercase block mt-1">Eco Lounge</span>
+                <p class="text-sm text-stone-400 mt-4 leading-relaxed">
+                    Nossa casinha pra você celebrar. Estrutura completa em meio à natureza para tornar seu evento único em Rio Branco.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white uppercase tracking-wider text-sm mb-4">Localização</h4>
+                <a href="https://maps.app.goo.gl/89eVMzTgNRbwaTgJ7" target="_blank" rel="noopener noreferrer" class="text-sm text-stone-400 hover:text-lounge-gold transition-colors flex items-start gap-2">
+                    <span class="text-lounge-gold">📍</span>
+                    <span>Estrada do Amapá<br>Rio Branco - Acre (AC)<br><span class="underline text-xs text-lounge-gold mt-1 inline-block">Abrir no Google Maps</span></span>
+                </a>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white uppercase tracking-wider text-sm mb-4">Central de Reservas</h4>
+                <div class="space-y-3 text-sm">
+                    <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-lounge-gold hover:underline font-medium">
+                        <span>📱 (68) 99982-9094</span>
+                    </a>
+                    <div class="pt-1">
+                        <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="inline-block bg-lounge-gold hover:bg-amber-400 text-lounge-dark font-bold px-5 py-2.5 rounded-full text-xs transition-all">
+                            Faça sua reserva agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-stone-800/80 text-center text-xs text-stone-500">
+            <p>&copy; 2026 Casa da Gente - Eco Lounge. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Lightbox para Galeria -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full bg-lounge-card rounded-3xl overflow-hidden shadow-2xl border border-stone-700" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 bg-black/60 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors z-10">
+                ✕
+            </button>
+            <img id="lightbox-img" src="" alt="Foto ampliada" class="w-full max-h-[75vh] object-contain bg-black">
+            <div class="p-4 text-center">
+                <p id="lightbox-caption" class="text-white font-medium text-sm"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fotos padrão iniciais da galeria
+        const defaultPhotos = [
+            {
+                src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+                tag: 'Fachada & Jardim',
+                title: 'Casarão amarelo cercado por flores e gramado'
+            },
+            {
+                src: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80',
+                tag: 'Lazer & Sol',
+                title: 'Piscina adulto e infantil com deck'
+            },
+            {
+                src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
+                tag: 'Natureza',
+                title: 'Passarela no gramado e paisagismo'
+            },
+            {
+                src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80',
+                tag: 'Conforto',
+                title: 'Área coberta com churrasqueira'
+            },
+            {
+                src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+                tag: 'Aventura',
+                title: 'Açude com deck e tirolesa'
+            }
+        ];
+
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+
+            defaultPhotos.forEach((photo, index) => {
+                const spanClass = index === 0 ? 'md:col-span-8 aspect-[16/10]' : (index === 1 ? 'md:col-span-4 aspect-[4/3] md:aspect-auto' : 'md:col-span-4 aspect-[4/3]');
+                
+                const card = document.createElement('div');
+                card.className = `${spanClass} group relative rounded-3xl overflow-hidden shadow-lg cursor-pointer bg-stone-200`;
+                card.onclick = () => openLightbox(photo.src, photo.title);
+
+                card.innerHTML = `
+                    <img src="${photo.src}" 
+                         onerror="this.src='https://placehold.co/800x500/2E5A44/FFFFFF?text=Casa+da+Gente'"
+                         alt="${photo.title}" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end justify-between p-6">
+                        <div>
+                            <span class="text-lounge-gold text-xs font-semibold uppercase tracking-wider">${photo.tag}</span>
+                            <h3 class="text-white font-serif text-lg sm:text-xl font-bold">${photo.title}</h3>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Inicializa a galeria ao carregar
+        renderGallery();
+
+        // Lightbox da Galeria
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
