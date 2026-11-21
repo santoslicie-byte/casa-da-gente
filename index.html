@@ -38,16 +38,8 @@
     <header class="fixed top-0 w-full z-50 bg-lounge-dark/95 backdrop-blur-md border-b border-stone-800 text-white transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-lounge-gold to-amber-600 flex items-center justify-center text-lounge-dark shadow-lg group-hover:scale-105 transition-transform">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                    </svg>
-                </div>
-                <div>
-                    <span class="font-serif font-bold text-xl tracking-wide text-lounge-gold block leading-none">CASA DA GENTE</span>
-                    <span class="text-[10px] tracking-[0.25em] text-stone-400 uppercase block mt-1">Eco Lounge</span>
-                </div>
+            <a href="#" class="flex items-center group">
+                <img src="logo.jpg.png" alt="Logo da Casa da Gente Eco Lounge" class="h-14 w-24 sm:h-16 sm:w-32 object-contain transition-transform group-hover:scale-105">
             </a>
 
             <!-- Menu Desktop -->
@@ -86,8 +78,7 @@
     <section class="relative pt-20 min-h-[85vh] flex items-center bg-lounge-dark overflow-hidden">
         <!-- Imagem de Fundo com Overlay -->
         <div class="absolute inset-0 z-0">
-            <img id="hero-bg-img" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1920&q=80" 
-                 onerror="this.src='https://placehold.co/1920x1080/1C1B18/D4AF37?text=Casa+da+Gente+Eco+Lounge'"
+            <img id="hero-bg-img" src="casa.jpg.jpeg"
                  alt="Área externa e jardim da Casa da Gente" 
                  class="w-full h-full object-cover opacity-45 scale-105 transition-transform duration-1000">
             <div class="absolute inset-0 bg-gradient-to-t from-lounge-dark via-lounge-dark/70 to-transparent"></div>
@@ -102,7 +93,7 @@
                     Nossa casinha pra <span class="text-lounge-gold italic">você celebrar</span> momentos inesquecíveis.
                 </h1>
                 <p class="text-lg sm:text-xl text-stone-300 max-w-2xl font-light leading-relaxed">
-                    Um refúgio exclusivo cercado pela natureza, com piscina, açude com deck, tirolesa e estrutura completa para aniversários, confraternizações e lazer em família.
+                    <strong class="font-medium text-white">Um espaço para celebrar todos os momentos!</strong> Da comemoração em família aos eventos corporativos, a Casa da Gente é o cenário ideal para reunir pessoas, criar experiências especiais e celebrar cada ocasião. Um ambiente acolhedor, cercado pela natureza e preparado para receber você e seus convidados.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
                     <a href="https://wa.me/5568999829094" target="_blank" rel="noopener noreferrer" class="bg-lounge-gold hover:bg-amber-400 text-lounge-dark font-bold px-8 py-4 rounded-full text-center transition-all shadow-lg shadow-lounge-gold/20 flex items-center justify-center gap-2">
@@ -346,6 +337,34 @@
         </div>
     </section>
 
+    <!-- Visão 360° do Google Maps -->
+    <section id="visao-360" class="py-16 sm:py-20 bg-lounge-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span class="text-lounge-gold font-bold text-xs uppercase tracking-[0.25em]">Explore o Espaço</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Conheça a Casa em 360°</h2>
+                <p class="text-stone-400 mt-3">Navegue pela visão panorâmica da Casa da Gente no Google Maps.</p>
+            </div>
+            <div class="overflow-hidden rounded-3xl border border-stone-700 shadow-2xl">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!4v1763760000000!6m8!1m7!1s6aEh3oeS7guhAv2OiP7aLA!2m2!1d-9.974!2d-67.824!3f163.1135!4f0!5f0.7820865974627469!6f0"
+                    title="Visão 360° da Casa da Gente no Google Maps"
+                    class="w-full aspect-video"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+            <div class="text-center mt-6">
+                <a href="https://www.google.com/local/place/fid/0x917f8b562336fc49:0x8e05dfeb1b4b2a5c/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3D6aEh3oeS7guhAv2OiP7aLA%26cb_client%3Dsearch.gws-prod.grass%26yaw%3D163.1135%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&amp;ik=CAISFjZhRWgzb2VTN2d1aEF2Mk9pUDdhTEE%3D&amp;vp=DQ4dI0M&amp;sa=X&amp;ved=2ahUKEwi-5vDH75mYAxWAHLkGHepyJZwQpx96BAgUEBI"
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-lounge-gold hover:bg-amber-400 text-lounge-dark font-bold px-6 py-3 rounded-full text-sm transition-all">
+                    Abrir visão 360° no Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Rodapé e Localização -->
     <footer class="bg-lounge-dark text-stone-300 border-t border-stone-800 pt-16 pb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-10">
@@ -409,29 +428,39 @@
         // Fotos padrão iniciais da galeria
         const defaultPhotos = [
             {
-                src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+                src: 'frente.jpg.jpeg',
                 tag: 'Fachada & Jardim',
-                title: 'Casarão amarelo cercado por flores e gramado'
+                title: 'Fachada da Casa da Gente'
             },
             {
-                src: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80',
+                src: 'piscina.jpg.jpeg',
                 tag: 'Lazer & Sol',
                 title: 'Piscina adulto e infantil com deck'
             },
             {
-                src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
+                src: 'gramado.jpg.jpeg',
                 tag: 'Natureza',
-                title: 'Passarela no gramado e paisagismo'
+                title: 'Gramado amplo cercado pela natureza'
             },
             {
-                src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80',
+                src: 'area.jpg.jpeg',
                 tag: 'Conforto',
                 title: 'Área coberta com churrasqueira'
             },
             {
-                src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+                src: 'acude.jpg.jpeg',
                 tag: 'Aventura',
                 title: 'Açude com deck e tirolesa'
+            },
+            {
+                src: 'sinuca.jpg.jpeg',
+                tag: 'Diversão',
+                title: 'Mesa de sinuca'
+            },
+            {
+                src: 'sobrado.jpg.jpeg',
+                tag: 'Estrutura',
+                title: 'Pergolado de madeira'
             }
         ];
 
